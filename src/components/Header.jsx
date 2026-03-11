@@ -6,28 +6,28 @@ const Header = () => {
 
   return (
     <>
-      <div className='w-full shadow-md'>
-        <nav className='flex justify-between items-center max-w-7xl mx-auto px-4 py-3 '>
+      <div className='w-full shadow-sm bg-white sticky top-0 z-50'>
+        <nav className='flex justify-between items-center max-w-7xl mx-auto px-6 py-4'>
           
-          <div>
+          <div className='cursor-pointer'>
             <NavLink to="/">
-              <img src={logo} alt="logo" className="h-10" />
+              <img src={logo} alt="logo" className="h-10 transition-transform duration-300 hover:scale-105" />
             </NavLink>
           </div>
 
-          <div>
-            <ul className='flex gap-6 font-medium'>
-              <NavLink to='/' className={({ isActive }) => isActive ? 'text-blue-500 border-b-2 border-blue-500' : 'hover:text-blue-500'}>
-                <li className='py-1'>Home</li>
+          <div className='hidden md:block'>
+            <ul className='flex gap-8 font-medium text-gray-700'>
+              <NavLink to='/' className={({ isActive }) => isActive ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors pb-1'}>
+                <li>Home</li>
               </NavLink>
-              <NavLink to='/doctors' className={({ isActive }) => isActive ? 'text-blue-500 border-b-2 border-blue-500' : 'hover:text-blue-500'}>
-                <li className='py-1'>All Doctors</li>
+              <NavLink to='/doctors' className={({ isActive }) => isActive ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors pb-1'}>
+                <li>All Doctors</li>
               </NavLink>
-              <NavLink to='/about' className={({ isActive }) => isActive ? 'text-blue-500 border-b-2 border-blue-500' : 'hover:text-blue-500'}>
-                <li className='py-1'>About</li>
+              <NavLink to='/about' className={({ isActive }) => isActive ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors pb-1'}>
+                <li>About</li>
               </NavLink>
-              <NavLink to='/contact' className={({ isActive }) => isActive ? 'text-blue-500 border-b-2 border-blue-500' : 'hover:text-blue-500'}>
-                <li className='py-1'>Contact</li>
+              <NavLink to='/contact' className={({ isActive }) => isActive ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-600 transition-colors pb-1'}>
+                <li>Contact</li>
               </NavLink>
             </ul>
           </div>
@@ -35,7 +35,7 @@ const Header = () => {
           <div>
             <button 
               onClick={() => navigate('/login')}
-              className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors'
+              className='bg-blue-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-blue-700 hover:shadow-md transition-all duration-300'
             >
               Create Account
             </button>
