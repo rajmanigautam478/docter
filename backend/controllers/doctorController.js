@@ -62,7 +62,7 @@ const updateDoctorProfile = async (req, res) => {
         res.json({ success: false, message: error.message });
     }
 };
-
+// fbjak
 // API to get single doctor (for public)
 const doctorDetails = async (req, res) => {
     try {
